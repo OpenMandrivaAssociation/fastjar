@@ -11,7 +11,6 @@ Source1:        http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{v
 Requires(post): info-install
 Requires(preun): info-install
 BuildRequires:  zlib-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 fastjar is an implementation of Sun's jar utility that comes with
