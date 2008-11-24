@@ -1,9 +1,9 @@
 Name:           fastjar
-Version:        0.95
-Release:        %mkrel 3
+Version:        0.97
+Release:        %mkrel 1
 Epoch:          0
 Summary:        Archive tool for Java archives
-License:        GPL
+License:        GPLv2+
 Group:          Development/Java
 URL:            http://savannah.nongnu.org/projects/fastjar
 Source0:        http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
