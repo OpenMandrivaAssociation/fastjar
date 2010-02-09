@@ -1,17 +1,17 @@
-Name:           fastjar
-Version:        0.98
-Release:        %mkrel 1
-Epoch:          0
-Summary:        Archive tool for Java archives
-License:        GPLv2+
-Group:          Development/Java
-URL:            http://savannah.nongnu.org/projects/fastjar
-Source0:        http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
-Source1:        http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz.sig
-Requires(post): info-install
-Requires(preun): info-install
-BuildRequires:  zlib-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
+Name:		fastjar
+Version:	0.98
+Release:	%mkrel 2
+Epoch:		0
+Summary:	Archive tool for Java archives
+License:	GPLv2+
+Group:		Development/Java
+URL:		http://savannah.nongnu.org/projects/fastjar
+Source0:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
+Source1:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz.sig
+Requires(post):	info-install
+Requires(preun):info-install
+BuildRequires:	zlib-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 fastjar is an implementation of Sun's jar utility that comes with
@@ -25,8 +25,8 @@ used to search files in a jar file for a pattern.
 %setup -q
 
 %build
-%{configure2_5x}
-%{make}
+%configure2_5x
+%make
 
 %install
 %{__rm} -rf %{buildroot}
