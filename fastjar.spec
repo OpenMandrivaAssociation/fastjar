@@ -1,6 +1,6 @@
 Name:		fastjar
 Version:	0.98
-Release:	%mkrel 2
+Release:	%mkrel 3
 Epoch:		0
 Summary:	Archive tool for Java archives
 License:	GPLv2+
