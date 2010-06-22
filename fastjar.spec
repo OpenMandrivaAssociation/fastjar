@@ -1,6 +1,6 @@
 Name:		fastjar
 Version:	0.98
-Release:	%mkrel 3
+Release:	%mkrel 4
 Epoch:		0
 Summary:	Archive tool for Java archives
 License:	GPLv2+
@@ -8,6 +8,7 @@ Group:		Development/Java
 URL:		http://savannah.nongnu.org/projects/fastjar
 Source0:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
 Source1:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz.sig
+Patch0: fastjar-0.98-CVE-2010-0831,2322.diff
 Requires(post):	info-install
 Requires(preun):info-install
 BuildRequires:	zlib-devel
@@ -23,6 +24,7 @@ used to search files in a jar file for a pattern.
 
 %prep
 %setup -q
+%patch0 -p0 -b .CVE-2010-0831,2322
 
 %build
 %configure2_5x
