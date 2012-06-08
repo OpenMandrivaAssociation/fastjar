@@ -1,6 +1,6 @@
 Name:		fastjar
 Version:	0.98
-Release:	%mkrel 6
+Release:	7
 Epoch:		0
 Summary:	Archive tool for Java archives
 License:	GPLv2+
@@ -8,11 +8,8 @@ Group:		Development/Java
 URL:		http://savannah.nongnu.org/projects/fastjar
 Source0:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
 Source1:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz.sig
-Patch0: fastjar-0.98-CVE-2010-0831,2322.diff
-Requires(post):	info-install
-Requires(preun):info-install
+Patch0:		fastjar-0.98-CVE-2010-0831,2322.diff
 BuildRequires:	zlib-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 fastjar is an implementation of Sun's jar utility that comes with
@@ -31,23 +28,13 @@ used to search files in a jar file for a pattern.
 %make
 
 %install
-%{__rm} -rf %{buildroot}
-%{makeinstall_std}
-
-%clean
-%{__rm} -rf %{buildroot}
-
-%post
-%_install_info fastjar.info
-
-%preun
-%_remove_install_info fastjar.info
+%__rm -rf %{buildroot}
+%makeinstall_std
 
 %files
-%defattr(0644,root,root,0755)
-%doc AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
-%attr(0755,root,root) %{_bindir}/fastjar
-%attr(0755,root,root) %{_bindir}/grepjar
+%doc AUTHORS COPYING ChangeLog NEWS README TODO
+%{_bindir}/fastjar
+%{_bindir}/grepjar
 %{_infodir}/fastjar.info*
 %{_mandir}/man1/fastjar.1*
 %{_mandir}/man1/grepjar.1*
