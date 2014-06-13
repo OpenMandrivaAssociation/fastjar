@@ -1,7 +1,7 @@
 Summary:	Archive tool for Java archives
 Name:		fastjar
 Version:	0.98
-Release:	13
+Release:	14
 License:	GPLv2+
 Group:		Development/Java
 Url:		http://savannah.nongnu.org/projects/fastjar
