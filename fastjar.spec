@@ -4,7 +4,7 @@ Version:	0.98
 Release:	19
 License:	GPLv2+
 Group:		Development/Java
-Url:		http://savannah.nongnu.org/projects/fastjar
+Url:		https://savannah.nongnu.org/projects/fastjar
 Source0:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
 Source1:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz.sig
 Patch0: fastjar-0.98-CVE-2010-0831,2322.diff
