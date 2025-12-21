@@ -8,6 +8,11 @@ Url:		https://savannah.nongnu.org/projects/fastjar
 Source0:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz
 Source1:	http://download.savannah.nongnu.org/releases/fastjar/fastjar-%{version}.tar.gz.sig
 Patch0: fastjar-0.98-CVE-2010-0831,2322.diff
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(zlib)
 
 %description
